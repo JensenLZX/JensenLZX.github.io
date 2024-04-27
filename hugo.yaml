@@ -11,11 +11,11 @@ params:
     Title: Hi there wave
     Content: Welcome to my blog
 
-  socialIcons: # optional
-    - name: "cv"
-      url: "https://github.com/JensenLZX/JensenLZX.github.io/"
-    - name: "github"
-      url: "https://github.com/JensenLZX/"
+  # socialIcons: # optional
+    # - name: "cv"
+    #   url: "https://github.com/JensenLZX/JensenLZX.github.io/"
+    # - name: "github"
+    #   url: "https://github.com/JensenLZX/"
     # - name: "email"
     #   url: "private"
 
