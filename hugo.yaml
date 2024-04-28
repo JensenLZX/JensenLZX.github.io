@@ -1,8 +1,14 @@
 baseURL: https://jensenlzx.github.io/
 languageCode: en-us
-title: my_blog
+title: Luo's Blog
 theme: "PaperMod"
 
 params:
+  defaultTheme: auto
+  
   assets:
     disableFingerprinting: true
+
+  homeInfoParams:
+    Title: Hi there wave
+    Content: Can be Info, links, about...
