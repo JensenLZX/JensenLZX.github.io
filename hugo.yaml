@@ -7,20 +7,20 @@ params:
   assets:
     disableFingerprinting: true
 
-  homeInfoParams:
-    Title: Hi there wave
-    Content: Welcome to my blog
+  # homeInfoParams:
+  #   Title: Hi there wave
+  #   Content: Welcome to my blog
 
-  socialIcons: # optional
-    - name: "cv"
-      url: "https://github.com/JensenLZX/JensenLZX.github.io/"
-    - name: "github"
-      url: "https://github.com/JensenLZX/"
-    - name: "email"
-      url: "private"
+#   socialIcons: # optional
+#     - name: "cv"
+#       url: "https://github.com/JensenLZX/JensenLZX.github.io/"
+#     - name: "github"
+#       url: "https://github.com/JensenLZX/"
+#     - name: "email"
+#       url: "private"
 
-outputs:
-  home:
-    - HTML
-    - RSS
-    - JSON # necessary for search
+# outputs:
+#   home:
+#     - HTML
+#     - RSS
+#     - JSON # necessary for search
