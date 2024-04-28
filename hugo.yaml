@@ -6,8 +6,11 @@ theme: "PaperMod"
 params:
   defaultTheme: auto
 
+  images: 
+
   assets:
     disableFingerprinting: true
+    favicon: 🍀
 
   homeInfoParams:
     Title: Welcome to Zhengxin's Blog 👋
