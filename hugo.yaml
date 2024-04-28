@@ -10,9 +10,15 @@ params:
     disableFingerprinting: true
 
   homeInfoParams:
-    Title: Hi there 👋
-    Content: Welcome to Luo Zhengxin's Blog!
+    Title: Welcome to Zhengxin's Blog 👋
+    Content: This is Luo Zhengxin's blog.
 
   socialIcons: # optional
     - name: "github"
       url: "https://github.com/JensenLZX/"
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
