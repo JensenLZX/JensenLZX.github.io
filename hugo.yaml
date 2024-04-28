@@ -10,8 +10,8 @@ params:
     disableFingerprinting: true
 
   homeInfoParams:
-    Title: Hi there wave
-    Content: Can be Info, links, about...
+    Title: Hi there 👋
+    Content: Welcome to Luo Zhengxin's Blog!
 
   socialIcons: # optional
     - name: "github"
