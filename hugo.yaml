@@ -3,6 +3,15 @@ languageCode: en-us
 title: Zhengxin's Blog
 theme: "PaperMod"
 
+menu:
+    main:
+        - name: search
+          url: search/
+          weight: 10
+        - name: archive
+          url: archive/
+          weight: 20
+          
 params:
   defaultTheme: auto
 
@@ -23,6 +32,16 @@ params:
   socialIcons: # optional
     - name: "github"
       url: "https://github.com/JensenLZX/"
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
 
 outputs:
   home:
