@@ -5,11 +5,11 @@ theme: "PaperMod"
 
 menu:
     main:
-        - name: search
+        - name: Search
           url: search/
           weight: 10
-        - name: archive
-          url: archive/
+        - name: Archive
+          url: archives/
           weight: 20
           
 params:
