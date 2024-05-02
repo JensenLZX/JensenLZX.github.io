@@ -2,17 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Zhengxin&#39;s Blog</title>
-    <link>http://localhost:1313/</link>
+    <link>https://jensenlzx.github.io/</link>
     <description>Recent content on Zhengxin&#39;s Blog</description>
     <generator>Hugo -- 0.125.4</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Apr 2024 04:34:26 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Apr 2024 17:47:33 +0800</lastBuildDate>
+    <atom:link href="https://jensenlzx.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Normalization</title>
+      <link>https://jensenlzx.github.io/posts/normalization/normalization/</link>
+      <pubDate>Tue, 30 Apr 2024 17:47:33 +0800</pubDate>
+      <guid>https://jensenlzx.github.io/posts/normalization/normalization/</guid>
+      <description>如果是对二维有形式下的各种归一化方式有混淆的，可以参看下面对于 CV 任务的全局概览
+{ { &amp;lt; figure src=&amp;ldquo;https://source.unsplash.com/Z0lL0okYjy0&amp;quot; attr=&amp;ldquo;Photo by Aditya Telange on Unsplash&amp;rdquo; align=center link=&amp;ldquo;https://unsplash.com/photos/Z0lL0okYjy0&amp;quot; target=&amp;quot;_blank&amp;rdquo; &amp;gt; } }
+Batch Norm Batch Norm
+Layer Norm 一维形式 对于 NLP 任务的 一维 embedding，每一个 token 就是不同的 feature。
+对同一个 token 位置的所有 feature 进行归一化操作。相当于是把原本长短不一的向量都拉长或缩短到了一个 n 维空间中的球上，n 就是 feature 的维度。不同的 embedding 就是指向角度不同的向量。比如下面这个是二维空间中的形式
+二维形式 对于 CV 任务的 二维 embedding，因为单看某个位置的像素其实并没有具体的意义，还需要整张图进行理解，所以往往会将整张图看成一个 $H \times W$ 的feature。不同的 channel 才是不同的 feature。
+上面的图相当于一维 Layer Norm 的图绕着垂直于 $feature \times length$ 面的轴旋转90°的结果，channel 数就相当于一维中的 sequence_length。所以二维的 Layer Norm 是对一整张 feature map 去计算均值（mean）和方差（std），然后进行归一化。所以如果输入的 tensor 的维度为 [Batch, Channel, Height, Width] (N, C, H, W)，则计算为： $$ y= \frac{x−E[x]}{Var[x]+ϵ}∗γ+β, \qquad all ~ x ~ with ~ same ~ N ~ index $$ Layer Norm 是在每个样本中，对所有的 channel 和 feature 进行归一化。对于 NLP 任务，就是每个 token (channel) * embedding (feature) 上作归一化。 对于 CV 任务，则是对每一个 channel * feature map 作归一化。</description>
+    </item>
     <item>
       <title>Gumbel Max</title>
-      <link>http://localhost:1313/posts/gumbel_max/</link>
+      <link>https://jensenlzx.github.io/posts/gumbel_max/gumbel_max/</link>
       <pubDate>Sun, 28 Apr 2024 04:34:26 +0800</pubDate>
-      <guid>http://localhost:1313/posts/gumbel_max/</guid>
+      <guid>https://jensenlzx.github.io/posts/gumbel_max/gumbel_max/</guid>
       <description>Gumbel Max 起源于极值分布。</description>
     </item>
   </channel>

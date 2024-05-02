@@ -12,10 +12,14 @@ menu:
           url: archives/
           weight: 20
           
+enableEmoji: true
+
 params:
   defaultTheme: auto
 
-  images: 
+  showtoc: true
+
+  author: Luo Zhengxin
 
   assets:
     disableFingerprinting: true
