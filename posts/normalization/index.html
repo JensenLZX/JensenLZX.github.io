@@ -15,9 +15,6 @@ Layer Norm 一维形式 对于 NLP 任务的 一维 embedding，每一个 token 
 上面的图相当于一维 Layer Norm 的图绕着垂直于 $feature \times length$ 面的轴旋转90°的结果，channel 数就相当于一维中的 sequence_length。所以二维的 Layer Norm 是对一整张 feature map 去计算均值（mean）和方差（std），然后进行归一化。所以如果输入的 tensor 的维度为 [Batch, Channel, Height, Width] (N, C, H, W)，则计算为： $$ y= \frac{x−E[x]}{Var[x]&#43;ϵ}∗γ&#43;β, \qquad all ~ x ~ with ~ same ~ N ~ index $$ Layer Norm 是在每个样本中，对所有的 channel 和 feature 进行归一化。对于 NLP 任务，就是每个 token (channel) * embedding (feature) 上作归一化。 对于 CV 任务，则是对每一个 channel * feature map 作归一化。">
 <meta name="author" content="Luo Zhengxin">
 <link rel="canonical" href="https://jensenlzx.github.io/posts/normalization/">
-
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-  <meta name="referrer" content="no-referrer-when-downgrade">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://jensenlzx.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://jensenlzx.github.io/assets/favicon-16x16.png">
@@ -196,11 +193,6 @@ Layer Norm 一维形式 对于 NLP 任务的 一维 embedding，每一个 token 
         </ul>
     </nav>
 </header>
-
-
-<div  class="meta-item">&nbsp·&nbsp
-  <span id="busuanzi_container_page_pv">本文阅读量<span id="busuanzi_value_page_pv"></span>次</span>
-</div>
 <main class="main">
 
 <article class="post-single">
@@ -211,12 +203,7 @@ Layer Norm 一维形式 对于 NLP 任务的 一维 embedding，每一个 token 
     </h1>
     <div class="post-meta"><span title='2024-04-30 17:47:33 +0800 CST'>April 30, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Luo Zhengxin
 
-
-      <div  class="meta-item">&nbsp·&nbsp
-        <span id="busuanzi_container_page_pv">本文阅读量<span id="busuanzi_value_page_pv"></span>次</span>
-      </div>
-
-    </div>
+</div>
   </header> <aside id="toc-container" class="toc-container wide">
     <div class="toc">
         <details  open>
@@ -375,16 +362,8 @@ Layer Norm 是在每个样本中，对所有的 channel 和 feature 进行归一
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
         <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
     </span>
-
     
-    <div class="busuanzi-footer">
-    <span id="busuanzi_container_site_pv">
-        本站总访问量<span id="busuanzi_value_site_pv"></span>次
-    </span>
-    <span id="busuanzi_container_site_uv">
-        本站访客数<span id="busuanzi_value_site_uv"></span>人次
-    </span>
-    </div></footer>
+</footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
