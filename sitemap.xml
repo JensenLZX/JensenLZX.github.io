@@ -2,10 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://jensenlzx.github.io/tags/ai/</loc>
+    <lastmod>2024-04-30T17:47:33+08:00</lastmod>
+  </url><url>
+    <loc>https://jensenlzx.github.io/categories/artifical-intelligence/</loc>
+    <lastmod>2024-04-30T17:47:33+08:00</lastmod>
+  </url><url>
+    <loc>https://jensenlzx.github.io/categories/</loc>
+    <lastmod>2024-04-30T17:47:33+08:00</lastmod>
+  </url><url>
+    <loc>https://jensenlzx.github.io/tags/deep-learning/</loc>
+    <lastmod>2024-04-30T17:47:33+08:00</lastmod>
+  </url><url>
+    <loc>https://jensenlzx.github.io/categories/deep-learning/</loc>
+    <lastmod>2024-04-30T17:47:33+08:00</lastmod>
+  </url><url>
+    <loc>https://jensenlzx.github.io/tags/normalization/</loc>
+    <lastmod>2024-04-30T17:47:33+08:00</lastmod>
+  </url><url>
     <loc>https://jensenlzx.github.io/posts/normalization/</loc>
     <lastmod>2024-04-30T17:47:33+08:00</lastmod>
   </url><url>
     <loc>https://jensenlzx.github.io/posts/</loc>
+    <lastmod>2024-04-30T17:47:33+08:00</lastmod>
+  </url><url>
+    <loc>https://jensenlzx.github.io/tags/</loc>
     <lastmod>2024-04-30T17:47:33+08:00</lastmod>
   </url><url>
     <loc>https://jensenlzx.github.io/</loc>
@@ -13,10 +34,6 @@
   </url><url>
     <loc>https://jensenlzx.github.io/archives/</loc>
   </url><url>
-    <loc>https://jensenlzx.github.io/categories/</loc>
-  </url><url>
     <loc>https://jensenlzx.github.io/search/</loc>
-  </url><url>
-    <loc>https://jensenlzx.github.io/tags/</loc>
   </url>
 </urlset>
