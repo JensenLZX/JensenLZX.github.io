@@ -58,6 +58,50 @@
 
     </style>
 </noscript>
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            },
+            "HTML-CSS": {
+                availableFonts: ["Arial", "TeX"],
+                preferredFont: "TeX",
+                webFont: "TeX"
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
+
+
+
   
 
 <meta property="og:title" content="AI" />
@@ -117,11 +161,6 @@
                 </a>
             </li>
             <li>
-                <a href="https://jensenlzx.github.io/archives/" title="Archive">
-                    <span>Archive</span>
-                </a>
-            </li>
-            <li>
                 <a href="https://jensenlzx.github.io/categories" title="Categories">
                     <span>Categories</span>
                 </a>
@@ -129,6 +168,16 @@
             <li>
                 <a href="https://jensenlzx.github.io/tags" title="Tags">
                     <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://jensenlzx.github.io/archives/" title="Archive">
+                    <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://jensenlzx.github.io/about/" title="About Me">
+                    <span>About Me</span>
                 </a>
             </li>
         </ul>
@@ -148,10 +197,12 @@
   </header>
   <div class="entry-content">
     <p>如果是对二维有形式下的各种归一化方式有混淆的，可以参看下面对于 CV 任务的全局概览
-2d Norm 概览 https://twitter.com/Xu_Cao_/status/1054634647945015296 ## Batch Norm Batch Norm
+2d Norm 概览 https://twitter.com/Xu_Cao_/status/1054634647945015296 其中每个方块代表一张图，这张图是由 Channel 数个 2d 的 feature map 组成的。 上方则是注明了每种归一化后 tensor 的维度变化情况。
+Batch Norm Batch Norm
 Layer Norm 一维形式 对于 NLP 任务的 一维 embedding，每一个 token 就是不同的 feature。
-Layer Norm https://proceedings.mlr.press/v119/shen20e/shen20e.pdf 对同一个 token 位置的所有 feature 进行归一化操作。相当于是把原本长短不一的向量都拉长或缩短到了一个 n 维空间中的球上，n 就是 feature 的维度。不同的 embedding 就是指向角度不同的向量。比如下面这个是二维空间中的形式 2d Normalization https://blog.csdn.net/root_clive/article/details/89373471 ### 二维形式 对于 CV 任务的 二维 embedding，因为单看某个位置的像素其实并没有具体的意义，还需要整张图进行理解，所以往往会将整张图看成一个 $H \times W$ 的feature。不同的 channel 才是不同的 feature。
-Layer Norm https://arxiv.org/abs/1803.08494 上面的图相当于一维 Layer Norm 的图绕着垂直于 $feature \times length$ 面的轴旋转90°的结果，channel 数就相当于一维中的 sequence_length。所以二维的 Layer Norm 是对一整张 feature map 去计算均值（mean）和方差（std），然后进行归一化。所以如果输入的 tensor 的维度为 `[Batch, Channel, Height, Width]` (N, C, H, W)，则计算为： $$ y= \frac{x−E[x]}{Var[x]&#43;ϵ}∗γ&#43;β, \qquad all ~ x ~ with ~ same ~ N ~ index $$ Layer Norm 是在每个样本中，对所有的 channel 和 feature 进行归一化。对于 NLP 任务，就是每个 token (channel) * embedding (feature) 上作归一化。 对于 CV 任务，则是对每一个 channel * feature map 作归一化。 作用 Layer Norm 把特征进行归一化，使得原本各feature之间的差异进一步放大，形成各多样的表示，从而利于模型的学习。...</p>
+Layer Norm https://proceedings.mlr.press/v119/shen20e/shen20e.pdf 对同一个 token 位置的所有 feature 进行归一化操作。相当于是把原本长短不一的向量都拉长或缩短到了一个 n 维空间中的球上，n 就是 feature 的维度。不同的 embedding 就是指向角度不同的向量。比如下面这个是二维空间中的形式
+2d Normalization https://blog.csdn.net/root_clive/article/details/89373471 二维形式 对于 CV 任务的 二维 embedding，因为单看某个位置的像素其实并没有具体的意义，还需要整张图进行理解，所以往往会将整张图看成一个 $H \times W$ 的feature。不同的 channel 才是不同的 feature。
+Layer Norm https://arxiv.org/abs/1803.08494 上面的图相当于一维 Layer Norm 的图绕着垂直于 $feature \times length$ 面的轴旋转90°的结果，channel 数就相当于一维中的 sequence_length。所以二维的 Layer Norm 是对一整张 feature map 去计算均值（mean）和方差（std），然后进行归一化。所以如果输入的 tensor 的维度为 [Batch, Channel, Height, Width] (N, C, H, W)，则计算为： $$ y= \frac{x−E[x]}{Var[x]&#43;ϵ}∗γ&#43;β, \qquad all ~ x ~ with ~ same ~ N ~ index $$ Layer Norm 是在每个样本中，对所有的 channel 和 feature 进行归一化。对于 NLP 任务，就是每个 token (channel) * embedding (feature) 上作归一化。 对于 CV 任务，则是对每一个 channel * feature map 作归一化。...</p>
   </div>
   <footer class="entry-footer"><span title='2024-04-30 17:47:33 +0800 CST'>April 30, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Luo Zhengxin</footer>
   <a class="entry-link" aria-label="post link to Normalization" href="https://jensenlzx.github.io/posts/normalization/"></a>
