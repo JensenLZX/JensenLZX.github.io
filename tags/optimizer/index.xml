@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Optimizer on Zhengxin&#39;s Blog</title>
+    <link>http://localhost:1313/tags/optimizer/</link>
+    <description>Recent content in Optimizer on Zhengxin&#39;s Blog</description>
+    <generator>Hugo -- 0.125.4</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 06 May 2024 15:24:53 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/optimizer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Optimizer</title>
+      <link>http://localhost:1313/posts/optimizer/</link>
+      <pubDate>Mon, 06 May 2024 15:24:53 +0800</pubDate>
+      <guid>http://localhost:1313/posts/optimizer/</guid>
+      <description>深度学习是通过构建目标（Target），然后计算目标与输出（Output）的误差（也被称为损失 Loss）来进行迭代式优化的。优化时，需要依赖不同的优化器（Optimizer）。这篇文章就整理一下不同优化器的理论以及特性。
+SGD SGD 全称是 Stocastic Gradient Descent，随机梯度下降，由梯度下降方法发展。梯度下降法的更新方式为： $$ \theta_k \leftarrow \theta_{k-1} - \alpha \frac{1}{N} \sum_{i=1}^{N}\nabla_{\theta_{k-1}} J_{i}(y_{pred},y_{tar}) $$ 其中 $\theta$ 是优化目标参数，k 是优化次数， $\alpha$ 是迭代步长，N 是样本个数，$J$ 是损失函数。可见，其是在第 k 轮根据 n 个样本上损失对于 k-1 轮参数求导的梯度和来更新参数。
+但是这样的方法有个弊端，样本个数无法做到太大，因为每一次需要把所有的样本都计算一遍。一个很简单的想法就是每次对样本做一个均匀采样，只计算其中一部分样本的损失梯度和，这样在期望上仍然是相等的。更专业一点说，这是个对完整梯度的无偏估计。这就是随机梯度下降： $$ \theta_k \leftarrow \theta_{k-1} - \alpha \frac{1}{n} \sum_{i=1}^{n}\nabla_{\theta_{k-1}} J_{i}(y_{pred},y_{tar}) $$
+Momentum Optimizer in a Saddle Point https://cs231n.github.io/neural-networks-3/ 可以看到，在一个鞍点（Saddle Point）由于梯度比较小，SGD会非常难以逃离这样的区域，这样就发展了带动量的方法。
+Momentum 的方法非常简单，就是增加了一个动量项——曾经更新的方向很有可能还是一个好方向，所以要不断累积： $$ \begin{align} M_{k} &amp;amp;= \beta M_{k-1} + (1-\beta) \nabla_{\theta_{k-1}} J\ \theta_k &amp;amp;= \theta_{k-1} - \alpha M_{k} \end{align} $$ 其中 $M_k$ 是计算的当前第 k 轮的动量平均梯度，$\beta$ 是平滑梯度时所用的超参数。</description>
+    </item>
+  </channel>
+</rss>
