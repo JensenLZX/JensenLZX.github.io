@@ -1,27 +1,36 @@
 +++
 title = 'Normalization'
 date = 2024-04-30T17:47:33+08:00
-draft = false
+draft = true
+tags = ["Deep Learning", "AI","Normalization"]
+categories = ["Artifical Intelligence", "Deep Learning"]
+
 +++
 
 如果是对二维有形式下的各种归一化方式有混淆的，可以参看下面对于 **CV** 任务的全局概览
 
-<!-- <div>
-    <center>
-        <img src="./pics/2d_all_norms.jpg"
-             alt="2d Norm 概览"
-             style="zoom:0.7" />
-        <br>
-        	<b>2d Norm 概览</b>
-        <br>
-        	<i>https://twitter.com/Xu_Cao_/status/1054634647945015296</i>
-    </center>
-</div> -->
+<center>
+    <img src="2d_all_norms.jpg"
+         alt="2d Norm 概览"
+         style="zoom:0.7" />
+    <b>2d Norm 概览</b>
+    <br>
+        <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+            display: inline-block;
+            color: #999;
+            padding: 2px;">
+      		<i>https://twitter.com/Xu_Cao_/status/1054634647945015296</i>
+  		</div>
+</center>
 
+其中每个方块代表一张图，这张图是由 Channel 数个 2d 的 feature map 组成的。
+上方则是注明了每种归一化后 tensor 的维度变化情况。
 
 ## Batch Norm
 
 Batch Norm
+
+
 
 ## Layer Norm
 
@@ -29,49 +38,57 @@ Batch Norm
 
 对于 NLP 任务的 **一维** embedding，每一个 token 就是不同的 feature。
 
-<!-- <div>
-    <center>
-        <img src="./pics/layer_norm_nlp.jpg"
-             alt="Layer Norm"
-             style="zoom:0.5" />
-        <br>
-        	<b>Layer Norm</b>
-       	<br>
-        	<i>https://proceedings.mlr.press/v119/shen20e/shen20e.pdf</i>
-    </center>
-</div> -->
+<center>
+    <img src="layer_norm_nlp.jpg"
+         alt="Layer Norm"
+         style="zoom:0.5" />
+    	<b>Layer Norm</b>
+   	<br>
+    	<div style="color:orange; border-bottom: 1px solid #d9d9d9;
+        display: inline-block;
+        color: #999;
+        padding: 2px;">
+  		<i>https://proceedings.mlr.press/v119/shen20e/shen20e.pdf</i>
+		</div>
+</center>
 
 对同一个 token 位置的所有 feature 进行归一化操作。相当于是把原本长短不一的向量都拉长或缩短到了一个 n 维空间中的球上，n 就是 feature 的维度。不同的 embedding 就是指向角度不同的向量。比如下面这个是二维空间中的形式
 
-<!-- <div>
+<div>
     <center>
-        <img src="./pics/2d_normalization.png"
+        <img src="2d_normalization.png"
              alt="Layer Norm"
              style="zoom:0.7" />
-        <br>
         	<b>2d Normalization</b>
        	<br>
-        	<i>https://blog.csdn.net/root_clive/article/details/89373471</i>
+        <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+        display: inline-block;
+        color: #999;
+        padding: 2px;">
+  		<i>https://blog.csdn.net/root_clive/article/details/89373471</i>
+		</div>
     </center>
-</div> -->
+</div>
 
 ### 二维形式
 
 对于 CV 任务的 **二维** embedding，因为单看某个位置的像素其实并没有具体的意义，还需要整张图进行理解，所以往往会将整张图看成一个 $H \times W$ 的feature。不同的 channel 才是不同的 feature。
 
-
-
-<!-- <div>
+<div>
     <center>
-        <img src="./pics/layer_norm_cv.jpg"
+        <img src="layer_norm_cv.jpg"
              alt="Layer Norm"
              style="zoom:0.5" />
-        <br>
         	<b>Layer Norm</b>
         <br>
+            <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+            display: inline-block;
+            color: #999;
+            padding: 2px;">
         	<i>https://arxiv.org/abs/1803.08494</i>
+		    </div>
     </center>
-</div> -->
+</div>
 
 上面的图相当于一维 Layer Norm 的图绕着垂直于 $feature \times length$ 面的轴旋转90°的结果，channel 数就相当于一维中的 sequence_length。所以二维的 Layer Norm 是对一整张 feature map 去计算均值（mean）和方差（std），然后进行归一化。所以如果输入的 tensor 的维度为 `[Batch, Channel, Height, Width]` (N, C, H, W)，则计算为：
 $$
@@ -88,17 +105,21 @@ Layer Norm 把特征进行归一化，使得原本各feature之间的差异进�
 
 但是这里存在一个问题，这么做的前提条件是 feature 各分量之间仅只有相对大小关系存在意义，而绝对值的大小并没有被模型所捕获。
 
-<!-- <div>
+<div>
     <center>
-        <img src="./pics/semantic_vector.jpeg"
+        <img src="semantic_vector.jpeg"
              alt="Semantic Vector"
              style="zoom:0.5" />
-        <br>
         	<b>Semantic Vector</b>
         <br>
+            <div style="color:orange; border-bottom: 1px solid #d9d9d9;
+            display: inline-block;
+            color: #999;
+            padding: 2px;">
         	<i>https://www.tizi365.com/topic/3987.html</i>
+		    </div>
     </center>
-</div> -->
+</div>
 
 也就是说 feature 实际上是在 space 空间中的一个向量。仅有向量的指向具有明确意义，向量的模长是无意义的。这样的归一化方式在 NLP 的 embedding 空间中是合理的，实验效果也不错，但是在每个 feature 绝对值大小有特殊含义的表征上就不是很合理。比如一张纯黑和纯白的图，过 Layer Norm 后都是一致的，但是却显示不了差别，就丧失了部分信息。
 
@@ -113,6 +134,32 @@ Layer Norm 把特征进行归一化，使得原本各feature之间的差异进�
 ## Group Norm
 
 ## RMS Norm
+
+RMS Norm 全称是 Root Mean Square Layer Normalization。其是为了提高 Layer Norm 的训练速度，仅利用激活值总和的均方根进行缩放。
+
+其计算公式如下：
+
+`$$
+   \begin{align}
+    RMSNorm(x) &= \frac{x}{RMS(x)} \cdot \gamma \\
+    RMS(x) &= \sqrt{\frac{1}{H} \sum^{H}_{i=1} x_{i}^{2}}
+   \end{align}
+$$`
+
+RMS Norm 是诸如 Chinchilla 等大语言模型的归一化方法。
+
+## Deep Norm
+
+DeepNorm 是为了稳定深层 Transformer 的训练，其计算公式如下：
+
+$$
+DeepNorm(x) = LayerNorm(\alpha \cdot x + Sublayer(x))
+$$
+
+Sublayer 是 Transformer 层中的前馈网络或自注意力模块。DeepNorm 用到了 GLM 等大语言模型上。
+
+
+## 归一化模块的位置
 
 
 

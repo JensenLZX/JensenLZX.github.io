@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Zhengxin&#39;s Blog</title>
-    <link>https://jensenlzx.github.io/</link>
-    <description>Recent content on Zhengxin&#39;s Blog</description>
+    <title>租房 on Zhengxin&#39;s Blog</title>
+    <link>https://jensenlzx.github.io/tags/%E7%A7%9F%E6%88%BF/</link>
+    <description>Recent content in 租房 on Zhengxin&#39;s Blog</description>
     <generator>Hugo -- 0.125.4</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 24 Jun 2024 01:20:44 +0800</lastBuildDate>
-    <atom:link href="https://jensenlzx.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://jensenlzx.github.io/tags/%E7%A7%9F%E6%88%BF/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Renting House</title>
       <link>https://jensenlzx.github.io/posts/renting_house/</link>
@@ -54,70 +54,6 @@
 不交定金，只交订金
 合同有效期限
 入住提灯定损 【视频记录】地板污渍、墙面污渍、家具、电器、水表电表</description>
-    </item>
-    <item>
-      <title>南京攻略</title>
-      <link>https://jensenlzx.github.io/posts/guide_for_nanjing/</link>
-      <pubDate>Fri, 17 May 2024 15:14:38 +0800</pubDate>
-      <guid>https://jensenlzx.github.io/posts/guide_for_nanjing/</guid>
-      <description>钟山 ： 灵谷寺、明孝陵、中山陵、植物园、美龄宫、山顶公园，
-鸡鸣寺+玄武湖+城墙 1天
-红山动物园：大红山和放牛山 0.5天
-愚园
-夫子庙
-老门东
-秦淮河
-白鹭洲
-坐船
-1天可能有点赶
-南京博物院
-总统府
-1天
-第1天（5.23） 抵达20：00
-组会
-酒店：草间弥生
-第2天（5.24) 早餐：
-灵谷寺
-音乐台：鸽子食喂鸽子拍照片
-中餐：自带食物 糕点、酸奶等
-中山陵
-可以拍免费的钥匙链，听说拍的不错
-南1门-陵园路（梧桐大道）
-美龄宫
-晚餐： 蟹三宝，提前预约排队 或者别的啥 刘长兴备选
-休息
-酒店：草间弥生
-第3天（5.25) 退房，存行李
-早餐：
-樱驼村出发-山顶-西马腰-(或索道)
-太平门出发-山顶-索道
-中餐：
-植物园
-明孝陵
-小剧场《蝴蝶梦》
-晚餐： 广东阿生鱼捞
-酒店：
-第4天（5.26)（预约订票） 早餐：
-总统府
-打车
-中餐：泥炉烧肉师
-打车
-南京博物院 14:00-16:00
-逛
-晚餐： 科巷
-酒店：
-第5天（5.27) 退房存行李
-早餐：鸭得堡
-鸡鸣寺 2-3 小时
-中餐：南京大牌档
-明城墙 解放门 -&amp;gt; 玄武门</description>
-    </item>
-    <item>
-      <title>Who Am I?</title>
-      <link>https://jensenlzx.github.io/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://jensenlzx.github.io/about/</guid>
-      <description>about</description>
     </item>
   </channel>
 </rss>

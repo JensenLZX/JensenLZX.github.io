@@ -6,3 +6,12 @@ draft = true
 +++
 
 Gumbel Max 起源于极值分布。
+
+
+$$
+x \sim f(p,\epsilon) \qquad \epsilon \sim P_{known}(\cdot)
+$$
+
+$$
+u \sim Uniform(0,1)
+$$

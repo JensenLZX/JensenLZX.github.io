@@ -3,21 +3,41 @@ languageCode: en-us
 title: Zhengxin's Blog
 theme: "PaperMod"
 
+enableRobotsTXT: true
+
 menu:
     main:
         - name: Search
           url: search/
           weight: 10
+        - identifier: categories
+          name: Categories
+          url: categories
+          weight: 20
+        - identifier: tags
+          name: Tags
+          url: tags
+          weight: 30
         - name: Archive
           url: archives/
-          weight: 20
-          
+          weight: 40
+        - name: About Me
+          url: about/
+          weight: 50
+              
 enableEmoji: true
 
 params:
   defaultTheme: auto
 
   showtoc: true
+  TocOpen: true
+
+  comments: true
+
+  ShowReadingTime: true
+  ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
 
   author: Luo Zhengxin
 
@@ -46,6 +66,14 @@ params:
     minMatchCharLength: 0
     # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
     keys: ["title", "permalink", "summary", "content"]
+    
+  busuanzi:
+    enable: true
+  
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
 
 outputs:
   home:

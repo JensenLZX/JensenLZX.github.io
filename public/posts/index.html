@@ -9,7 +9,8 @@
 <meta name="keywords" content="">
 <meta name="description" content="Posts - Zhengxin&#39;s Blog">
 <meta name="author" content="Luo Zhengxin">
-<link rel="canonical" href="https://jensenlzx.github.io/posts/">
+<link rel="canonical" href="https://jensenlzx.github.io/posts/"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <meta name="referrer" content="no-referrer-when-downgrade">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://jensenlzx.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://jensenlzx.github.io/assets/favicon-16x16.png">
@@ -57,6 +58,50 @@
 
     </style>
 </noscript>
+<script type="text/javascript" async
+    src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\[\[', '\]\]']],
+                processEscapes: true,
+                processEnvironments: true,
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                TeX: {
+                    equationNumbers: { autoNumber: "AMS" },
+                    extensions: ["AMSmath.js", "AMSsymbols.js"]
+                }
+            },
+            "HTML-CSS": {
+                availableFonts: ["Arial", "TeX"],
+                preferredFont: "TeX",
+                webFont: "TeX"
+            }
+        });
+
+        MathJax.Hub.Queue(function () {
+            
+            
+            
+            var all = MathJax.Hub.getAllJax(), i;
+            for (i = 0; i < all.length; i += 1) {
+                all[i].SourceElement().parentNode.className += ' has-jax';
+            }
+        });
+    </script>
+
+<style>
+    code.has-jax {
+        font: inherit;
+        font-size: 100%;
+        background: inherit;
+        border: inherit;
+        color: #515151;
+    }
+</style>
+
+
+
   
 
 <meta property="og:title" content="Posts" />
@@ -131,8 +176,23 @@
                 </a>
             </li>
             <li>
+                <a href="https://jensenlzx.github.io/categories" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://jensenlzx.github.io/tags" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
                 <a href="https://jensenlzx.github.io/archives/" title="Archive">
                     <span>Archive</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://jensenlzx.github.io/about/" title="About Me">
+                    <span>About Me</span>
                 </a>
             </li>
         </ul>
@@ -147,42 +207,127 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Normalization
+    <h2 class="entry-hint-parent">Renting House
     </h2>
   </header>
   <div class="entry-content">
-    <p>如果是对二维有形式下的各种归一化方式有混淆的，可以参看下面对于 CV 任务的全局概览
-{ { &lt; figure src=“https://source.unsplash.com/Z0lL0okYjy0&#34; attr=“Photo by Aditya Telange on Unsplash” align=center link=“https://unsplash.com/photos/Z0lL0okYjy0&#34; target=&#34;_blank” &gt; } }
-Batch Norm Batch Norm
-Layer Norm 一维形式 对于 NLP 任务的 一维 embedding，每一个 token 就是不同的 feature。
-对同一个 token 位置的所有 feature 进行归一化操作。相当于是把原本长短不一的向量都拉长或缩短到了一个 n 维空间中的球上，n 就是 feature 的维度。不同的 embedding 就是指向角度不同的向量。比如下面这个是二维空间中的形式
-二维形式 对于 CV 任务的 二维 embedding，因为单看某个位置的像素其实并没有具体的意义，还需要整张图进行理解，所以往往会将整张图看成一个 $H \times W$ 的feature。不同的 channel 才是不同的 feature。
-上面的图相当于一维 Layer Norm 的图绕着垂直于 $feature \times length$ 面的轴旋转90°的结果，channel 数就相当于一维中的 sequence_length。所以二维的 Layer Norm 是对一整张 feature map 去计算均值（mean）和方差（std），然后进行归一化。所以如果输入的 tensor 的维度为 [Batch, Channel, Height, Width] (N, C, H, W)，则计算为： $$ y= \frac{x−E[x]}{Var[x]&#43;ϵ}∗γ&#43;β, \qquad all ~ x ~ with ~ same ~ N ~ index $$ Layer Norm 是在每个样本中，对所有的 channel 和 feature 进行归一化。对于 NLP 任务，就是每个 token (channel) * embedding (feature) 上作归一化。 对于 CV 任务，则是对每一个 channel * feature map 作归一化。...</p>
+    <p>考虑小区 芳怡园、永靓嘉园、西山锦绣府、铭科苑、智学苑、春夏秋冬景、梅兰竹菊、柳浪家园、百草园
+靠谱中介 链家、贝壳
+还有：安居客、我爱我家、自如、乐有家
+考虑问题 配套设施
+消防设施
+隔音（门、墙、窗）附近有没有学校、高架桥、铁路、工地
+卫生间反味、地漏、马桶、下水是否正常？
+漏水、潮湿
+邻居、上下楼
+供暖方式
+民水民电？
+物业费多少？物业联系方式？
+网包吗？什么套餐？能不能拉网？
+是否独立电表
+水压
+油烟机排烟效果
+燃气灶
+家具（打开看一下是否是密度板）、电器状态、能耗等级
+灯的亮度 空调 洗手池水槽漏水 阳台晾晒衣物
+插座位置、数量
+网速测试
+每层住户数
+是否新装修？甲醛？（如果自测超标怎么办？赔偿？）（墙上是否贴墙纸？新装修配老电器重灾区）
+床垫是否塌陷
+床是否会响
+其他问题 上一任租客合同到期还是其他原因走的？间隔多久了？ 问能否办居住证（核验是否二房东要房产证） 和谁签合同？我的付款方式需要和房东确认 签约时核对问题 发票？
+房产本确定房东，记录编号（网上核对）、房主身份证
+起租日、到期日、交租日
+押金数量、退还方式
+水电费、网费、物业费是否已结清（是否可以自己缴费）
+如何维修、更换家具？我找人修还是房主找人修？
+可否找房东添加家具？
+除了房租外还有些什么费用？多久交一次？
+上述是否全部费用？
+退房提前多久？是否可转租？违约金？押金正常退？多就退？
+房东违约如何赔偿？
+退房时，验房标准？
+清洁费？还是我请人清洁？
+不交定金，只交订金
+合同有效期限
+入住提灯定损 【视频记录】地板污渍、墙面污渍、家具、电器、水表电表</p>
   </div>
-  <footer class="entry-footer"><span title='2024-04-30 17:47:33 +0800 CST'>April 30, 2024</span>&nbsp;·&nbsp;Luo Zhengxin</footer>
-  <a class="entry-link" aria-label="post link to Normalization" href="https://jensenlzx.github.io/posts/normalization/normalization/"></a>
+  <footer class="entry-footer"><span title='2024-06-24 01:20:44 +0800 CST'>June 24, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Luo Zhengxin</footer>
+  <a class="entry-link" aria-label="post link to Renting House" href="https://jensenlzx.github.io/posts/renting_house/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Gumbel Max
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
+    <h2 class="entry-hint-parent">南京攻略
     </h2>
   </header>
   <div class="entry-content">
-    <p>Gumbel Max 起源于极值分布。</p>
+    <p>钟山 ： 灵谷寺、明孝陵、中山陵、植物园、美龄宫、山顶公园，
+鸡鸣寺&#43;玄武湖&#43;城墙 1天
+红山动物园：大红山和放牛山 0.5天
+愚园
+夫子庙
+老门东
+秦淮河
+白鹭洲
+坐船
+1天可能有点赶
+南京博物院
+总统府
+1天
+第1天（5.23） 抵达20：00
+组会
+酒店：草间弥生
+第2天（5.24) 早餐：
+灵谷寺
+音乐台：鸽子食喂鸽子拍照片
+中餐：自带食物 糕点、酸奶等
+中山陵
+可以拍免费的钥匙链，听说拍的不错
+南1门-陵园路（梧桐大道）
+美龄宫
+晚餐： 蟹三宝，提前预约排队 或者别的啥 刘长兴备选
+休息
+酒店：草间弥生
+第3天（5.25) 退房，存行李
+早餐：
+樱驼村出发-山顶-西马腰-(或索道)
+太平门出发-山顶-索道
+中餐：
+植物园
+明孝陵
+小剧场《蝴蝶梦》
+晚餐： 广东阿生鱼捞
+酒店：
+第4天（5.26)（预约订票） 早餐：
+总统府
+打车
+中餐：泥炉烧肉师
+打车
+南京博物院 14:00-16:00
+逛
+晚餐： 科巷
+酒店：
+第5天（5.27) 退房存行李
+早餐：鸭得堡
+鸡鸣寺 2-3 小时
+中餐：南京大牌档
+明城墙 解放门 -&gt; 玄武门...</p>
   </div>
-  <footer class="entry-footer"><span title='2024-04-28 04:34:26 +0800 CST'>April 28, 2024</span>&nbsp;·&nbsp;Luo Zhengxin</footer>
-  <a class="entry-link" aria-label="post link to Gumbel Max" href="https://jensenlzx.github.io/posts/gumbel_max/gumbel_max/"></a>
+  <footer class="entry-footer"><span title='2024-05-17 15:14:38 +0800 CST'>May 17, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Luo Zhengxin</footer>
+  <a class="entry-link" aria-label="post link to 南京攻略" href="https://jensenlzx.github.io/posts/guide_for_nanjing/"></a>
 </article>
     </main>
     
 <footer class="footer">
+    <script src="https://utteranc.es/client.js"
+        repo="JensenLZX/blog_comments"
+        issue-term="title"
+        theme="boxy-light"
+        crossorigin="anonymous"
+        async>
+    </script>
         <span>&copy; 2024 <a href="https://jensenlzx.github.io/">Zhengxin&#39;s Blog</a></span> · 
 
     <span>
@@ -190,7 +335,15 @@ Layer Norm 一维形式 对于 NLP 任务的 一维 embedding，每一个 token 
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
         <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
     </span>
-</footer>
+    
+    <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv">
+        本站总访问量<span id="busuanzi_value_site_pv"></span>次
+    </span>
+    <span id="busuanzi_container_site_uv">
+        本站访客数<span id="busuanzi_value_site_uv"></span>人次
+    </span>
+    </div></footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
