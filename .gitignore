@@ -1,8 +1,8 @@
 # Hugo build output
-/public
-/resources
+public/
+resources/
 
 # Hugo / CI caches
 .hugo_cache/
-
+**.hugo_build.lock
 **.DS_Store

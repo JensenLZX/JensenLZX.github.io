@@ -1,0 +1,73 @@
+/* Diff 代码块整体样式 */
+pre code.language-diff {
+  display: block;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  font-family: var(--font-mono, monospace);
+  line-height: 1.5;
+  background: var(--diff-bg, #f8f9fa);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+.dark pre code.language-diff {
+  background: var(--diff-bg-dark, #1e1e1e);
+  border-color: rgba(255,255,255,0.1);
+}
+
+/* 删除行 */
+.language-diff .gd {
+  background-color: rgba(255, 0, 0, 0.08);
+  color: #c33;
+  display: block;
+  position: relative;
+  padding-left: 1rem;
+}
+.language-diff .gd::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #e44;
+  border-radius: 2px;
+}
+
+/* 添加行 */
+.language-diff .gi {
+  background-color: rgba(0, 200, 0, 0.08);
+  color: #2a2;
+  display: block;
+  position: relative;
+  padding-left: 1rem;
+}
+.language-diff .gi::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #2e8b57;
+  border-radius: 2px;
+}
+
+/* 未修改的提示行（可选，通常是文件头） */
+.language-diff .gu {
+  background-color: rgba(0, 120, 255, 0.08);
+  color: #268bd2;
+  display: block;
+  font-weight: 500;
+  padding-left: 1rem;
+  position: relative;
+}
+.language-diff .gu::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #268bd2;
+  border-radius: 2px;
+}
