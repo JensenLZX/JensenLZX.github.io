@@ -29,6 +29,11 @@
   weight = 40
 
 [[main]]
+  name = "简历"
+  pre = "circle-info"
+  url = "/static/resume_25_10_v3.pdf"
+
+[[main]]
   identifier = "github"
   pre = "github"
   url = "https://github.com/JensenLZX"
