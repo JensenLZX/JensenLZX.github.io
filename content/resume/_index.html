@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <title>下载简历</title>
+  </head>
+  <body>
+    <script>
+      // 自动触发下载
+      const link = document.createElement('a');
+      link.href = '/resume_LuoZhengxin_25_10_v3.pdf';
+      link.download = 'resume_LuoZhengxin_25_10_v3.pdf';
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+    </script>
+
+    <p>正在下载简历... 如果未自动下载，请
+      <a href="/resume_LuoZhengxin_25_10_v3.pdf" download>点击这里</a>。
+    </p>
+  </body>
+</html>
