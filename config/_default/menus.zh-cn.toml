@@ -31,7 +31,8 @@
 [[main]]
   name = "简历"
   pre = "circle-info"
-  url = "/static/resume_25_10_v3.pdf"
+  weight = 50
+  url = "/resume_25_10_v3.pdf"
 
 [[main]]
   identifier = "github"
