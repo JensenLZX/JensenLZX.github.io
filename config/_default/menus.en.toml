@@ -11,13 +11,13 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
- name = "New"
- pre = "bell"
+ name = "Posts"
+ pre = "list"
  pageRef = "posts"
  weight = 10
 
 [[main]]
-  name = "Tag"
+  name = "Tags"
   pre = "tag"
   pageRef = "tags"
   weight = 20
@@ -25,14 +25,27 @@
 [[main]]
   name = "About Me"
   pre = "orcid"
-  pageRef = "about"
+  pageRef = "/"
   weight = 40
+
+[[main]]
+  name = "Resume"
+  pre = "circle-info"
+  weight = 50
+  pageRef = "resume"
+  title = "Download my resume"
 
 [[main]]
   identifier = "github"
   pre = "github"
   url = "https://github.com/JensenLZX"
   weight = 400
+
+[[main]]
+  identifier = "linkedin"
+  pre = "linkedin"
+  url = "https://linkedin.com/in/jensenlzx/"
+  weight = 500
 
 # [[main]]
 #  name = "Parent"
@@ -78,7 +91,7 @@
 
 
 [[footer]]
-  name = "Tag"
+  name = "Tags"
   pre = "tag"
   pageRef = "tags"
   weight = 10
@@ -86,5 +99,5 @@
 [[footer]]
     name = "Author"
     pre = "orcid"
-    pageRef = "about"
+    pageRef = "/"
     weight = 20
