@@ -5,7 +5,7 @@ summary: '在实时代码补全中，代码改写是新一代代码补全推荐�
 date: 2025-10-02T00:14:07+08:00
 lastmod: 2025-10-02T00:15:11.820+0800
 series: ["Code Edit"]
-tags: ["Code Edit", "AI Coding", "AI", "Tech"]
+tags: ["Code Edit", "AI Coding", "Artificial Intelligence", "Tech"]
 draft: false
 ---
 {{< lead >}}
