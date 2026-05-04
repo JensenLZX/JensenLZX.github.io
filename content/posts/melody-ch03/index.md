@@ -7,6 +7,7 @@ weight: 3
 categories: ["小说"]
 tags: ["科幻", "AI", "旋律"]
 draft: false
+url: "/posts/melody/ch03/"
 showTableOfContents: false
 class: "fiction-prose"
 ---

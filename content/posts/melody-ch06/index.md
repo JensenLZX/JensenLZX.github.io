@@ -7,6 +7,7 @@ weight: 6
 categories: ["小说"]
 tags: ["科幻", "AI", "旋律"]
 draft: false
+url: "/posts/melody/ch06/"
 showTableOfContents: false
 class: "fiction-prose"
 ---
