@@ -1,4 +1,48 @@
-/* Diff 代码块整体样式 */
+/* ── 小说排版：中文衬线字体 + 首行缩进 ── */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap');
+
+.fiction-prose .prose {
+  font-family: "Noto Serif SC", "Source Han Serif SC", "思源宋体", "宋体", Georgia, serif;
+  font-size: 1.05rem;
+  line-height: 2;
+  letter-spacing: 0.02em;
+}
+
+.fiction-prose .prose p {
+  text-indent: 2em;
+  margin-top: 0;
+  margin-bottom: 0.6em;
+}
+
+/* 章节分隔线 */
+.fiction-prose .prose hr {
+  border: none;
+  border-top: 1px solid rgba(128, 128, 128, 0.3);
+  margin: 2em auto;
+  width: 40%;
+}
+
+/* 诗歌/引用段落不缩进 */
+.fiction-prose .prose blockquote p,
+.fiction-prose .prose li p {
+  text-indent: 0;
+}
+
+/* 诗歌引用样式 */
+.fiction-prose .prose blockquote {
+  border-left: 2px solid rgba(128, 128, 128, 0.4);
+  padding-left: 1.5em;
+  margin: 1.5em 0 1.5em 2em;
+  font-style: normal;
+  color: inherit;
+}
+
+.fiction-prose .prose blockquote p {
+  margin-bottom: 0.3em;
+  line-height: 1.9;
+}
+
+/* ── Diff 代码块整体样式 ── */
 pre code.language-diff {
   display: block;
   padding: 0.75rem 1rem;
