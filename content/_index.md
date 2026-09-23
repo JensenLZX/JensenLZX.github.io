@@ -11,6 +11,12 @@ draft: false
 
 ---
 
+## 最新动态 🎤
+
+**2026-09-05** · 在 **QECon 2026 上海站** 进行了技术分享，分享内容为《**Recursive Self-improvement Agent Harness: 自我迭代的 Harness Engineering**》 · {{< icon "download" >}} <a href="/slides_QECon2026_harness_engineering_v2.pdf" download>下载 Slides</a>
+
+---
+
 ## 关于我 🚀
 
 <div style="text-align: left; text-indent: 2em;">

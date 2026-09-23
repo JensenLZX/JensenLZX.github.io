@@ -9,6 +9,12 @@ Hi, I’m Zhengxin Luo! Welcome to my personal blog, where I share my thoughts, 
 
 ---
 
+## News 🎤
+
+**2026-09-05** · I gave a tech talk at **QECon 2026 Shanghai**, titled “**Recursive Self-improvement Agent Harness: 自我迭代的 Harness Engineering**” · {{< icon "download" >}} <a href="/slides_QECon2026_harness_engineering_v2.pdf" download>Download slides</a>
+
+---
+
 ## About Me 🚀
 
 <div style="text-align: left;">
